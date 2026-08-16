@@ -1,0 +1,5 @@
+[services][net.local.fuzzel.desktop]
+_launch=Alt+Space
+
+[services][org.kde.krunner.desktop]
+_launch=none

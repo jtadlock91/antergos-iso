@@ -44,8 +44,6 @@ rootfs:
     - net-snmp
     - snapper
     - btrfs-progs
-    - antergos-layan-theme
-    - tela-circle-icon-theme-git
     - cava
     - python-websockets
     - qt6-websockets
@@ -61,6 +59,16 @@ rootfs:
     - kwin-zones
     - oh-my-posh-bin
     - pacseek
+    # Fixes a real lockout bug: users.conf sets every new user's shell to
+    # zsh regardless of which desktop they choose, but zsh was never
+    # actually guaranteed to be installed. This applies to every desktop
+    # choice, not just KDE, so it belongs here rather than in any one
+    # desktop's package block.
+    - zsh
+    # Without this, GPU/wifi/etc. drivers can fail to initialize at all
+    # on first boot — worse than anything a post-install tool can fix,
+    # since the person may not even get a usable display to fix it with.
+    - linux-firmware
   packages-init:
     dinit:
       - pipewire-dinit
