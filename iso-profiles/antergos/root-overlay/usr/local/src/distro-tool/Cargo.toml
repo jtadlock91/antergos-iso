@@ -1,0 +1,15 @@
+[package]
+name = "distro-tool"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "distro-tool"
+path = "src/main.rs"
+
+[dependencies]
+# Pinned rather than "4" — keeps builds deterministic for anyone building
+# this from source, and avoids newer transitive deps requiring a bleeding
+# edge cargo/rustc.
+clap = { version = "=4.4.18", features = ["derive"] }
+anyhow = "1"

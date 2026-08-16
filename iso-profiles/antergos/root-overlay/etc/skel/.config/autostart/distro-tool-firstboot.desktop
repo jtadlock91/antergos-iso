@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=kitty --title "System Setup (one-time)" -e /usr/local/bin/distro-tool-firstboot.sh
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=System Setup
+Comment=One-time automatic setup — builds and runs distro-tool

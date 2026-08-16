@@ -69,6 +69,12 @@ rootfs:
     # on first boot — worse than anything a post-install tool can fix,
     # since the person may not even get a usable display to fix it with.
     - linux-firmware
+    # Needed to build distro-tool from source on first login (see
+    # root-overlay/etc/skel/.config/autostart/distro-tool-firstboot.desktop).
+    # A prebuilt binary isn't shipped here deliberately — a binary built
+    # on a different machine risks the exact glibc/library mismatch that
+    # caused real breakage during this project's own development.
+    - rust
   packages-init:
     dinit:
       - pipewire-dinit
