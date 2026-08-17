@@ -17,7 +17,8 @@
     - vivaldi
     - mesa
     - mesa-utils
-    - vulkan-nouveau
+    # vulkan-nouveau removed — see the plain calamares/modules copy of
+    # this file for the full reasoning; kept identical across both.
     - networkmanager
     - network-manager-applet
     - pipewire

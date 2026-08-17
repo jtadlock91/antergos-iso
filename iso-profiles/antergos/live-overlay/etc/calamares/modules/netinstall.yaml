@@ -17,7 +17,13 @@
     - vivaldi
     - mesa
     - mesa-utils
-    - vulkan-nouveau
+    # vulkan-nouveau removed — it was unconditionally installed on
+    # every system regardless of actual GPU vendor, wasted on the vast
+    # majority of AMD/Intel installs. distro-tool's own GPU detection
+    # already installs the correct vendor-specific Vulkan driver
+    # conditionally after install (lib32-vulkan-radeon for AMD,
+    # lib32-vulkan-intel for Intel; Nvidia gets guided toward the
+    # proprietary driver instead of nouveau via `distro-tool gpu`).
     - networkmanager
     - network-manager-applet
     - pipewire
