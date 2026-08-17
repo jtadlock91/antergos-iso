@@ -3,7 +3,18 @@ live-session:
   user: antergos
   password: antergos
   autologin: true
-  use-xlibre: true
+  # Xlibre (a full separate X11 session, distinct from XWayland
+  # compatibility) disabled for the live installer session only —
+  # Calamares runs fine under Wayland. This is scoped to the live
+  # session specifically and has zero effect on the installed system;
+  # neither netinstall.yaml nor packagechooser_de.conf reference
+  # X11/Xlibre/XWayland at all, so whatever XWayland dependency the
+  # installed target ends up with comes from KDE's own packages, not
+  # this flag. Stripping XWayland from the installed system too is a
+  # separate, real decision — Steam/Proton's Wayland support is still
+  # genuinely inconsistent game-to-game, not something to remove on
+  # general confidence without testing against actual games first.
+  use-xlibre: false
   services:
     - acpid
     - bluetoothd
