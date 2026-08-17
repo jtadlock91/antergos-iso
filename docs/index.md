@@ -43,6 +43,7 @@ The offline bare-minimum installer is **experimental and best-effort** — the o
 - [Init Systems](init-systems) — Dinit, OpenRC, S6, Runit compared
 - [Desktop Environments](desktop-environments) — available DEs in online mode
 - [Wallpapers](wallpapers) — where they go, how they work
+- [Restoring Languages](restoring-languages) — this fork ships English-only by default; how to add a language back
 - [Offline Installer](byode) — the BYODE bare-minimum installer
 
 ## What changed from original Antergos
