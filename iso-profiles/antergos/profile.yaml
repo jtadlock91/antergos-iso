@@ -52,10 +52,7 @@ rootfs:
     - fastfetch
     - noto-fonts-emoji
     - adw-gtk-theme
-    - ttf-hack-nerd
-    - ttf-fira-code
-    - ttf-terminus-nerd
-    - ttf-meslo-nerd
+    - ttf-jetbrains-mono-nerd
     - kwin-zones
     - oh-my-posh-bin
     - pacseek
